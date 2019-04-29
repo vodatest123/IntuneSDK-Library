@@ -5,8 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.os.Build;
 
-import com.vodafone.intunes_poc.logging.AppLoggerWrapper;
-
+import com.vodafone.intune_lib.logging.AppLoggerWrapper;
 
 public class CheckNetworkState {
 

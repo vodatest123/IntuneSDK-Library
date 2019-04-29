@@ -20,7 +20,7 @@ import com.microsoft.aad.adal.PromptBehavior;
 import com.microsoft.intune.mam.client.app.MAMComponents;
 import com.microsoft.intune.mam.policy.MAMEnrollmentManager;
 import com.microsoft.intune.mam.policy.MAMUserInfo;
-import com.vodafone.intunes_poc.logging.AppLoggerWrapper;
+import com.vodafone.intune_lib.logging.AppLoggerWrapper;
 
 /**
  * Manages authentication for the app.
