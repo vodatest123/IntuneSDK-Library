@@ -1,0 +1,80 @@
+/*
+ * Apply the MAM SDK plugin to this project. This will perform Intune class replacements automatically, see
+ * https://docs.microsoft.com/en-us/intune/app-sdk-android#replace-classes-methods-and-activities-with-their-mam-equivalent
+ * for more information.
+ */
+
+/*buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        // Include the MAM build plugin and Javassist, which it depends on
+        classpath "org.javassist:javassist:3.22.0-GA"
+        classpath files("/MAMSDK/com.microsoft.intune.mam.build.jar")
+    }
+}*/
+
+/////////////////////////////////////////////////////////////////////////
+apply plugin: 'com.android.library'
+//apply plugin: 'com.microsoft.intune.mam'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    //implementation fileTree(include: ['*.jar'], dir: 'libs')
+    def android_support_version = "28.0.0"
+    implementation "com.android.support:appcompat-v7:$android_support_version"
+    implementation "com.android.support:support-v4:$android_support_version"
+    implementation "com.android.support:design:$android_support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    // Test helpers
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    def arch_version = "1.1.1"
+    implementation "android.arch.lifecycle:extensions:$arch_version"
+    implementation "android.arch.lifecycle:viewmodel:$arch_version"
+
+    // Include the MAM SDK
+    implementation files('MAMSDK/Microsoft.Intune.MAM.SDK.aar')
+    implementation files('MAMSDK/Microsoft.Intune.MAM.SDK.Support.v4.jar')
+    implementation files('MAMSDK/Microsoft.Intune.MAM.SDK.Support.v7.jar')
+
+    // Include ADAL, Microsoft's sign-in service
+    implementation 'com.microsoft.aad:adal:1.14.1'
+}
+
+// Put app specific settings here
+/*intunemam {
+
+}*/

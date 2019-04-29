@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Intune Library</string>
+
+    <string name="please_sign_in">Welcome to Intune Demo!</string>
+    <string name="sign_in_button">Enter</string>
+    <string name="nav_home_title">Home</string>
+    <string name="nav_sign_out_title">Sign out</string>
+    <string name="microsoft_hint">Microsoft logo</string>
+
+    <string name="err_auth">Authentication error: %s</string>
+    <string name="auth_success">Successfully signed in</string>
+    <string name="auth_out_success">Successfully signed out</string>
+</resources>
