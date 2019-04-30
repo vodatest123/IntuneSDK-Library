@@ -16,8 +16,7 @@
         android:fullBackupContent="true"
         android:backupAgent="com.microsoft.intune.mam.client.app.backup.MAMDefaultBackupAgent"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:name=".application.InTunesApplication">
+        android:supportsRtl="true">
 
     <!-- Must be specified to allow users to login -->
     <activity
