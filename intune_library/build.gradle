@@ -4,23 +4,9 @@
  * for more information.
  */
 
-/*buildscript {
-
-    repositories {
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        // Include the MAM build plugin and Javassist, which it depends on
-        classpath "org.javassist:javassist:3.22.0-GA"
-        classpath files("/MAMSDK/com.microsoft.intune.mam.build.jar")
-    }
-}*/
-
-/////////////////////////////////////////////////////////////////////////
 apply plugin: 'com.android.library'
-//apply plugin: 'com.microsoft.intune.mam'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.vodatest123'
 
 android {
     compileSdkVersion 28
