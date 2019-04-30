@@ -25,7 +25,7 @@ import com.vodafone.intune_lib.utils.CheckNetworkState;
  *
  * Registers an authentication callback for MAM.
  */
-public class InTunesApplication extends Application {
+public abstract class InTunesApplication extends Application {
 
     private String TAG = this.getClass().getSimpleName();
 
